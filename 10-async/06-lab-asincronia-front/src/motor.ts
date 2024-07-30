@@ -9,6 +9,7 @@ export const fetchPersonajes = async (nombre: string = ''): Promise<Personaje[]>
         throw new Error('Error al obtener personajes');
     }
     const personajes: Personaje[] = await response.json();
+    console.log(personajes);
     return personajes;
 };
 
