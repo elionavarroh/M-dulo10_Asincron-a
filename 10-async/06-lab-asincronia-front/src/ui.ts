@@ -24,20 +24,23 @@ export const renderPersonajes = (personajes: Personaje[], personajesContainer: H
         personajeDiv.classList.add("personaje");
 
         const imagenPersonaje = document.createElement("img");
-        imagenPersonaje.src = `http://localhost:3000/images/${personaje.imagen}`;
+        imagenPersonaje.src = `http://localhost:3000/${personaje.imagen}`;
         imagenPersonaje.setAttribute("alt", personaje.nombre);
 
         const nombrePersonaje = document.createElement("h2");
         nombrePersonaje.innerText = personaje.nombre;
 
         const apodoPersonaje = document.createElement("p");
-        apodoPersonaje.innerHTML = `<strong>Apodo:</strong> ${personaje.apodo}`;
+        apodoPersonaje.classList.add("apodo");
+        apodoPersonaje.innerText = personaje.apodo;
 
         const especialidadPersonaje = document.createElement("p");
-        especialidadPersonaje.innerHTML = `<strong>Especialidad:</strong> ${personaje.especialidad}`;
+        especialidadPersonaje.classList.add("especialidad");
+        especialidadPersonaje.innerText = personaje.especialidad;
 
         const amigoPersonaje = document.createElement("p");
-        amigoPersonaje.innerHTML = `<strong>Amigo:</strong> ${personaje.amigo}`;
+        amigoPersonaje.classList.add("amigo");
+        amigoPersonaje.innerText = personaje.amigo;
 
         personajeDiv.appendChild(imagenPersonaje);
         personajeDiv.appendChild(nombrePersonaje);
